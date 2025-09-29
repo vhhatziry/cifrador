@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cifrador Afín</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cifrador/Descifrador Afín</h1>
+        <p>Sube un archivo de texto (.txt) para procesarlo.</p>
+
+        <form action="procesar.php" method="post" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="alpha">Valor de 'alpha' (coprimo con 26):</label>
+                <input type="number" id="alpha" name="alpha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="beta">Valor de 'b':</label>
+                <input type="number" id="beta" name="beta" required>
+            </div>
+
+            <div class="form-group">
+                <label for="opcion">Operación:</label>
+                <select id="opcion" name="opcion">
+                    <option value="E">Cifrar</option>
+                    <option value="D">Descifrar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="archivo">Archivo de entrada:</label>
+                <input type="file" id="archivo" name="archivo" accept=".txt" required>
+            </div>
+
+            <input type="submit" value="Procesar Archivo">
+        </form>
+    </div>
+
+</body>
+</html>

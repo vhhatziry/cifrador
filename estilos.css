@@ -1,0 +1,96 @@
+/* ---- Paleta de Colores ---- */
+:root {
+    --fondo-oscuro: #2c2a4a;      /* Un morado muy oscuro para el fondo de la página */
+    --fondo-tarjeta: #4f4c7a;    /* Un morado más claro para el contenedor */
+    --texto-claro: #f2f2f2;   
+    --titulo-m: #e4bdf4;   /* Un blanco suave para el texto */
+    --acento-vibrante: #ab4cd1;  /* El morado principal para botones y títulos */
+    --acento-hover: #8e44ad;     /* Un morado más oscuro para el efecto hover del botón */
+    --fondo-input: #403d64;      /* Un fondo para los campos del formulario */
+}
+
+/* ---- Estilos Generales ---- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ---- Contenedor Principal ---- */
+.container {
+    background-color: var(--fondo-tarjeta);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--titulo-m);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* ---- Formulario ---- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Estilo para los inputs de número, el selector y el de archivo */
+input[type="number"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--fondo-input);
+    border: 2px solid transparent; /* Borde transparente para que no se mueva en focus */
+    border-radius: 8px;
+    color: var(--texto-claro);
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    transition: border-color 0.3s;
+}
+
+/* Efecto al seleccionar un input */
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--acento-vibrante);
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--acento-vibrante);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Efecto hover para el botón de envío */
+input[type="submit"]:hover {
+    background-color: var(--acento-hover);
+}
