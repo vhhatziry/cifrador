@@ -1,8 +1,6 @@
 <?php
 
-// NUEVA FUNCIÓN PARA MOSTRAR ERRORES CON ESTILO
 function mostrarError($mensaje) {
-    // Imprime una página HTML completa con el estilo de nuestro sitio.
     echo <<<HTML
 <!DOCTYPE html>
 <html lang="es">
@@ -47,11 +45,9 @@ function mostrarError($mensaje) {
 </body>
 </html>
 HTML;
-    exit(); // Detiene el script para que no continúe.
 }
 
 
-// --- LÓGICA PRINCIPAL (con los nuevos manejos de error) ---
 
 $uploadDir = 'uploads/';
 if (!is_dir($uploadDir)) {
